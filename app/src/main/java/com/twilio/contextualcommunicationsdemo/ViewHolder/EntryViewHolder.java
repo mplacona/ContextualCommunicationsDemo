@@ -1,7 +1,10 @@
-package com.twilio.contextualcommunicationsdemo;
+package com.twilio.contextualcommunicationsdemo.ViewHolder;
 
 import android.view.View;
 import android.widget.TextView;
+
+import com.twilio.contextualcommunicationsdemo.DTO.Entry;
+import com.twilio.contextualcommunicationsdemo.R;
 
 import uk.co.ribot.easyadapter.ItemViewHolder;
 import uk.co.ribot.easyadapter.PositionInfo;
@@ -13,7 +16,7 @@ import uk.co.ribot.easyadapter.annotations.ViewId;
  */
 //Annotate the class with the layout ID of the item.
 @LayoutId(R.layout.entry_item)
-class EntryViewHolder extends ItemViewHolder<Entry> {
+public class EntryViewHolder extends ItemViewHolder<Entry> {
 
     //Annotate every field with the ID of the view in the layout.
     //The views will automatically be assigned to the fields.

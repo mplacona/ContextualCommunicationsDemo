@@ -1,4 +1,4 @@
-package com.twilio.contextualcommunicationsdemo;
+package com.twilio.contextualcommunicationsdemo.DTO;
 
 /**
  * Created by mplacona on 08/02/2016.

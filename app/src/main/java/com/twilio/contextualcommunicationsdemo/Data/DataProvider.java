@@ -1,4 +1,6 @@
-package com.twilio.contextualcommunicationsdemo;
+package com.twilio.contextualcommunicationsdemo.Data;
+
+import com.twilio.contextualcommunicationsdemo.DTO.Entry;
 
 import java.util.ArrayList;
 import java.util.List;
