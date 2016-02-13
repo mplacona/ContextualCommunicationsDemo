@@ -4,7 +4,6 @@
 
     <!-- make calls -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
@@ -24,9 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name="com.twilio.client.TwilioClientService"
             android:exported="false" />
+
+        <activity
+            android:name=".Activities.ActivityConversation"
+            android:label="@string/title_activity_activity_conversation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

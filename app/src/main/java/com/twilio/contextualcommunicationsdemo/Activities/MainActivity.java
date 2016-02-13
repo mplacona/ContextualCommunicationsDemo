@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
                         phone.connect("+447590566866");
 
                         break;
+                    case 3: // IPM
+                        intent = new Intent(MainActivity.this, ActivityConversation.class);
+                        startActivity(intent);
+                        break;
+                    case 4: // video
+                        intent = new Intent(MainActivity.this, ActivityConversation.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
