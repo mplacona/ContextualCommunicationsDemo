@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Contextual Communications Demo</string>
-    <string name="app_capability_url">http://yoursite.ngrok.io/token</string>
+    <string name="app_capability_url">http://mplacona.ngrok.io/api/tokens/client</string>
 </resources>
