@@ -1,10 +1,12 @@
 package com.twilio.contextualcommunicationsdemo;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.ListViewCompat;
@@ -47,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
                         */
                         break;
                     case 1: // second one of the list.
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setMessage("Calling...")
+                                .setCancelable(false)
+                                .setPositiveButton("Hang-up", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        phone.disconnect();
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+
+
                         phone.connect("+447590566866");
                         break;
                 }
