@@ -13,6 +13,7 @@ import android.support.v7.widget.ListViewCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import uk.co.ribot.easyadapter.EasyAdapter;
 import uk.co.ribot.easyadapter.ItemViewHolder;
@@ -40,13 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
                 switch (position) {
                     case 0: // first one of the list
-                        /*
-                        intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "1234567890"));
-                        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                            return;
-                        }
-                        startActivity(intent);
-                        */
+                        Toast.makeText(getApplicationContext(), "Some mobile website", Toast.LENGTH_LONG).show();
                         break;
                     case 1: // second one of the list.
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -62,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                         phone.connect("+441522246325");
+                        break;
+                    case 2: // third one of the list
+                        Toast.makeText(getApplicationContext(), "Another telephone number", Toast.LENGTH_LONG).show();
                         break;
                 }
             }
