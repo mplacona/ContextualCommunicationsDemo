@@ -1,21 +1,19 @@
-package com.twilio.contextualcommunicationsdemo.Activities;
+package com.twilio.contextualcommunicationsdemo;
 
-import android.content.DialogInterface;
+import android.Manifest;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ListViewCompat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.twilio.contextualcommunicationsdemo.Data.DataProvider;
-import com.twilio.contextualcommunicationsdemo.DTO.Entry;
-import com.twilio.contextualcommunicationsdemo.ViewHolder.EntryViewHolder;
-import com.twilio.contextualcommunicationsdemo.Communication.MonkeyPhone;
-import com.twilio.contextualcommunicationsdemo.R;
-
 import uk.co.ribot.easyadapter.EasyAdapter;
+import uk.co.ribot.easyadapter.ItemViewHolder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,19 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         */
                         break;
                     case 1: // second one of the list.
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setMessage("Calling...")
-                                .setCancelable(false)
-                                .setPositiveButton("Hang-up", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        phone.disconnect();
-                                    }
-                                });
-                        AlertDialog alert = builder.create();
-                        alert.show();
-
                         phone.connect("+447590566866");
-
                         break;
                     case 3: // IPM
                         intent = new Intent(MainActivity.this, ActivityConversation.class);

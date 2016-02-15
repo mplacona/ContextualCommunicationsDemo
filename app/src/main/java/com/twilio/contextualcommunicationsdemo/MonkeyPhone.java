@@ -1,4 +1,4 @@
-package com.twilio.contextualcommunicationsdemo.Communication;
+package com.twilio.contextualcommunicationsdemo;
 
 import android.content.Context;
 import android.util.Log;
@@ -6,7 +6,6 @@ import android.util.Log;
 import com.twilio.client.Connection;
 import com.twilio.client.Device;
 import com.twilio.client.Twilio;
-import com.twilio.contextualcommunicationsdemo.R;
 
 import java.io.IOException;
 import java.util.HashMap;
